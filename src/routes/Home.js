@@ -1,7 +1,8 @@
 import React from 'react'
+import Bill from '../containers/Bill'
 
 const Home = () => (
-  <h1>Application goes here</h1>
+  <Bill />
 )
 
 export default Home
