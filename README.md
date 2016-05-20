@@ -20,3 +20,8 @@ After completing steps 1 and 2 above, run `npm test`
 ## Public URL
 
 https://arb-bill-unattended-test.herokuapp.com/
+
+
+## Redux Dev Tools (dev mode)
+
+When running in development mode press CTRL-h to hide the Redux Dev Tools
