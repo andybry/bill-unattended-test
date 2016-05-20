@@ -1,1 +1,2 @@
 export const BILL_RESPONSE = 'BILL_RESPONSE'
+export const TOGGLE_PANEL = 'TOGGLE_PANEL'

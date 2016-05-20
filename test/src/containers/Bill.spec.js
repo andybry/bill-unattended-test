@@ -5,10 +5,12 @@ import { mount } from 'enzyme'
 import configureStore from '../../../src/store/configureStore'
 import { Provider } from 'react-redux'
 import BillComponent from '../../../src/components/Bill'
+import data from '../../fixtures/bill.json'
 
 const setup = (isLoading) => {
   const store = configureStore({
-    isLoading
+    isLoading,
+    bill: data
   })
   const component = mount(
     <Provider store={store}>

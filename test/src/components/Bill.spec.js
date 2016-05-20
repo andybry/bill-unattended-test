@@ -6,13 +6,14 @@ import Loading from '../../../src/components/Loading'
 import Content from '../../../src/components/Content'
 import { Provider } from 'react-redux'
 import configureStore from '../../../src/store/configureStore'
+import data from '../../fixtures/bill.json'
 
 const setup = (isLoading) => {
   const props = {
     isLoading
   }
   const component = mount(
-    <Provider store={configureStore()}>
+    <Provider store={configureStore({ bill: data })}>
       <Bill {...props} />
     </Provider>
   )
@@ -22,7 +23,7 @@ const setup = (isLoading) => {
   }
 }
 
-describe('src/components/Content', () => {
+describe('src/components/Bill', () => {
   it('should render the loading component when data isloading', () => {
     const { loading } = setup(true)
     expect(loading.length).toBe(1)

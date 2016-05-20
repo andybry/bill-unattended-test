@@ -12,4 +12,14 @@ describe('src/actions/index', () => {
         })
     })
   })
+
+  describe('togglePanel', () => {
+    it('should return a TOGGLE_PANEL with panel', () => {
+      expect(actions.togglePanel('panel'))
+        .toEqual({
+          type: actionTypes.TOGGLE_PANEL,
+          panel: 'panel'
+        })
+    })
+  })
 })
