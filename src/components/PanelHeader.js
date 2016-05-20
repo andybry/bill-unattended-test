@@ -9,7 +9,7 @@ const PanelHeader = ({
     tabIndex="0"
     className="PanelHeader"
     onClick={toggle}
-    onKeyDown={toggle}
+    onKeyDown={(e) => (e.which === 13 || e.which === 32 ? toggle() : '')}
   >
     <div className="PanelHeader__left">
       <span className="PanelHeader__state">[{isOpen ? '-' : '+'}]</span>
