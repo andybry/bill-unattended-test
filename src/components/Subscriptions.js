@@ -11,15 +11,16 @@ const Subscriptions = ({ total, subscriptions, toggle, isOpen }) => (
       isOpen={isOpen}
     />
     <PanelBody isOpen={isOpen}>
-      <h3>Subscriptions</h3>
+      <h3 className="Subscriptions__header">Subscriptions</h3>
       <ul>
         {subscriptions.map(
           subscription => <li className="Subscriptions__subscription" key={subscription.name}>
-            {subscription.type} -
-            {' '}
-            {subscription.name}
-            {' '}
-            £{subscription.cost}
+            <div className="Subscriptions__left">
+              <span className="Subscriptions__name">{subscription.name}</span>
+              {' '}
+              <span className="Subscriptions__type">({subscription.type})</span>
+            </div>
+            <span className="Subscriptions__cost">£{subscription.cost}</span>
           </li>
         )}
       </ul>

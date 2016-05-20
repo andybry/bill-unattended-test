@@ -1,0 +1,27 @@
+.Summary {
+  padding: 0 $content-margin-small;
+  @media($large) {
+    padding: 0 $content-margin-large;
+  }
+}
+
+.Summary__total {
+  text-align: right;
+  padding-top: 20px;
+}
+
+.Summary__cost {
+  font-weight: bold;
+  margin-left: 10px;
+  border-bottom: 1px solid black;
+}
+
+.Summary__date {
+  font-weight: bold;
+  margin-left: 5px;
+  margin-right: 5px;
+  @media($large) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

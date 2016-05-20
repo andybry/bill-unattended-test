@@ -1,0 +1,21 @@
+.Content {
+  max-width: 960px;
+  margin: auto;
+  background-color: $content-background-color;
+}
+
+.Content__header {
+  margin-top: 0;
+  padding: 16px $content-margin-small;
+  background-color: $header-background-color;
+  border-bottom: 1px solid $divider-color;
+  color: #fff;
+  @media($large) {
+    padding: 16px $content-margin-large;
+  }
+}
+
+.Content__divider {
+  border: 0;
+  border-bottom: 1px solid $divider-color;
+}

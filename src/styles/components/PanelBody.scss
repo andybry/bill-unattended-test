@@ -1,0 +1,12 @@
+.PanelBody {
+  margin: 0 $content-margin-small;
+  display: relative;
+  @media($large) {
+    margin: 0 $content-margin-large;
+  }
+  &.isOpen {
+    padding: $panel-margin;
+    border: 2px solid $panel-background-color;
+    border-top: 0;
+  }
+}

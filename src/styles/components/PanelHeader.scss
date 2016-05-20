@@ -1,0 +1,40 @@
+.PanelHeader {
+  margin: 0 $content-margin-small;
+  background-color: $panel-background-color;
+  display: relative;
+  @media($large) {
+    margin: 0 $content-margin-large;
+  }
+  cursor: pointer;
+  &:hover {
+    background-color: $panel-background-darker;
+  }
+}
+
+.PanelHeader__left {
+  display: inline-block;
+  width: 80%;
+}
+
+.PanelHeader__state {
+  margin-left: $panel-margin;
+  margin-right: 5px;
+  width: 25px;
+  display: inline-block;
+}
+
+.PanelHeader__title {
+  display: inline-block;
+}
+
+.PanelHeader__right {
+  display: inline-block;
+  text-align: right;
+  width: 20%;
+}
+
+.PanelHeader__total {
+  margin-right: $panel-margin;
+  display: inline-block;
+  font-weight: bold;
+}

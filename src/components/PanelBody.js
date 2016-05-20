@@ -1,7 +1,8 @@
 import React, { PropTypes } from 'react'
+import classnames from 'classnames'
 
 const PanelBody = ({ children, isOpen }) => (
-  <div className="PanelBody">
+  <div className={classnames('PanelBody', { isOpen })}>
     {isOpen ? children : ''}
   </div>
 )

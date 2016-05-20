@@ -13,19 +13,20 @@ const isOpen = (panels, panel) => (
 
 const Content = ({ bill, toggle, panels }) => (
   <div className="Content">
-    <h1>Statement</h1>
+    <h1 className="Content__header">Statement</h1>
 
     <Summary
       total={bill.total}
       statement={bill.statement}
     />
+    <hr className="Content__divider" />
     <Subscriptions
       total={bill.package.total}
       subscriptions={bill.package.subscriptions}
       toggle={toggle.bind(this, 'subscriptions')}
       isOpen={isOpen(panels, 'subscriptions')}
     />
-    <hr />
+    <hr className="Content__divider" />
     <SkyStore
       total={bill.skyStore.total}
       rentals={bill.skyStore.rentals}
@@ -33,13 +34,14 @@ const Content = ({ bill, toggle, panels }) => (
       toggle={toggle.bind(this, 'skystore')}
       isOpen={isOpen(panels, 'skystore')}
     />
-    <hr />
+    <hr className="Content__divider" />
     <CallCharges
       total={bill.callCharges.total}
       calls={bill.callCharges.calls}
       toggle={toggle.bind(this, 'calls')}
       isOpen={isOpen(panels, 'calls')}
     />
+    <hr className="Content__divider" />
   </div>
 )
 

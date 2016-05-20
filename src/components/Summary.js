@@ -1,17 +1,23 @@
 import React, { PropTypes } from 'react'
 import moment from 'moment'
 
-const date = input => moment(input).format('MMMM Do YYYY')
+const date = input => (
+  <time className="Summary__date" dateTime={input}>
+    {moment(input).format('MMMM Do YYYY')}
+  </time>
+)
 
 const Summary = ({ total, statement }) => (
   <div className="Summary">
-    <p>Generated {date(statement.generated)}</p>
-    <p>Due date {date(statement.due)}</p>
+    <p>Generated: {date(statement.generated)}</p>
+    <p>Due date: {date(statement.due)}</p>
     <p>
       For the period from {date(statement.period.from)}
       <span> to </span>{date(statement.period.to)}
     </p>
-    <p>Summary Total: £{total}</p>
+    <p className="Summary__total">
+      Summary Total: <span className="Summary__cost">£{total}</span>
+    </p>
   </div>
 )
 

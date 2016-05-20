@@ -11,15 +11,15 @@ const CallCharges = ({ total, calls, toggle, isOpen }) => (
       isOpen={isOpen}
     />
     <PanelBody isOpen={isOpen}>
-      <h3>Calls</h3>
+      <h3 className="CallCharges__header">Calls</h3>
       <ul>
         {calls.map(
           (item, index) => <li className="CallCharges__call" key={index}>
-            {item.called}
-            {' '}
-            {item.duration}
-            {' '}
-            £{item.cost}
+            <div className="CallCharges__left">
+              <span className="CallCharges__called">{item.called}</span>
+              <span className="CallCharges__duration">{item.duration}</span>
+            </div>
+            <span className="CallCharges__cost">£{item.cost}</span>
           </li>
         )}
       </ul>

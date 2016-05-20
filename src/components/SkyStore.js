@@ -11,13 +11,12 @@ const SkyStore = ({ total, rentals, buyAndKeep, toggle, isOpen }) => (
       isOpen={isOpen}
     />
     <PanelBody isOpen={isOpen}>
-      <h3>Rental</h3>
+      <h3 className="SkyStore__header">Rental</h3>
       <ul>
         {rentals.map(
           rental => <li className="SkyStore__rental" key={rental.title}>
-            {rental.title}
-            {' '}
-            £{rental.cost}
+            <span className="SkyStore__title">{rental.title}</span>
+            <span className="SkyStore__cost">£{rental.cost}</span>
           </li>
         )}
       </ul>
@@ -25,9 +24,8 @@ const SkyStore = ({ total, rentals, buyAndKeep, toggle, isOpen }) => (
       <ul>
         {buyAndKeep.map(
           item => <li className="SkyStore__buyAndKeep" key={item.title}>
-            {item.title}
-            {' '}
-            £{item.cost}
+            <span className="SkyStore__title">{item.title}</span>
+            <span className="SkyStore__cost">£{item.cost}</span>
           </li>
         )}
       </ul>

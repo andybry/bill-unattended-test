@@ -4,9 +4,13 @@ const PanelHeader = ({
   title, total, isOpen, toggle
 }) => (
   <div className="PanelHeader" onClick={toggle}>
-    <span className="Panel__state">[{isOpen ? '-' : '+'}]</span>
-    <h2 className="PanelHeader__title">{title}</h2>
-    <p className="PanelHeader__total">Total: £{total}</p>
+    <div className="PanelHeader__left">
+      <span className="PanelHeader__state">[{isOpen ? '-' : '+'}]</span>
+      <h2 className="PanelHeader__title">{title}</h2>
+    </div>
+    <div className="PanelHeader__right">
+      <p className="PanelHeader__total">£{total}</p>
+    </div>
   </div>
 )
 

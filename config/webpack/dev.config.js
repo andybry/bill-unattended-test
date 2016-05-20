@@ -8,7 +8,7 @@ module.exports = {
   ],
   module: {
     loaders: [
-      { test: /\.css$/, loader: 'style!css?sourceMap!postcss' }
+      { test: /\.scss$/, loader: 'style!css?sourceMap!sass' }
     ]
   }
 }

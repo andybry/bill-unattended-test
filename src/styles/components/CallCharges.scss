@@ -1,0 +1,29 @@
+.CallCharges__header {
+  margin: 0;
+}
+
+.CallCharges__call {
+  font-size: 80%;
+  @media($large) {
+    font-size: 100%;
+  }
+}
+
+.CallCharges__left {
+  display: inline-block;
+  width: 80%;
+}
+
+.CallCharges__called {
+  display: inline-block;
+  width: 50%;
+}
+
+.CallCharges__duration {
+  display: inline-block;
+  width: 50%;
+}
+
+.CallCharges__cost {
+  display: inline-block;
+}
