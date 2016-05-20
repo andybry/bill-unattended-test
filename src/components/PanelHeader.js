@@ -3,7 +3,14 @@ import React, { PropTypes } from 'react'
 const PanelHeader = ({
   title, total, isOpen, toggle
 }) => (
-  <div className="PanelHeader" onClick={toggle}>
+  <div
+    aria-role="button"
+    aria-pressed={isOpen}
+    tabIndex="0"
+    className="PanelHeader"
+    onClick={toggle}
+    onKeyDown={toggle}
+  >
     <div className="PanelHeader__left">
       <span className="PanelHeader__state">[{isOpen ? '-' : '+'}]</span>
       <h2 className="PanelHeader__title">{title}</h2>
