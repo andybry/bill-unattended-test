@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react'
 import PanelHeader from './PanelHeader'
 import PanelBody from './PanelBody'
+import * as format from '../utilities/format'
 
 const Subscriptions = ({ total, subscriptions, toggle, isOpen }) => (
   <div className="Subscriptions">
@@ -20,7 +21,7 @@ const Subscriptions = ({ total, subscriptions, toggle, isOpen }) => (
               {' '}
               <span className="Subscriptions__type">({subscription.type})</span>
             </div>
-            <span className="Subscriptions__cost">£{subscription.cost}</span>
+            <span className="Subscriptions__cost">£{format.price(subscription.cost)}</span>
           </li>
         )}
       </ul>

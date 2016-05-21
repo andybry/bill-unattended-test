@@ -9,9 +9,9 @@ const setup = () => {
   const props = {
     total: 1,
     subscriptions: [
-      { type: 'type1', name: 'name1', cost: 'cost1' },
-      { type: 'type2', name: 'name2', cost: 'cost2' },
-      { type: 'type3', name: 'name3', cost: 'cost3' }
+      { type: 'type1', name: 'name1', cost: 1 },
+      { type: 'type2', name: 'name2', cost: 2 },
+      { type: 'type3', name: 'name3', cost: 3 }
     ],
     toggle: expect.createSpy(),
     isOpen: true

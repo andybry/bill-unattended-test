@@ -2,6 +2,13 @@
   margin: 0;
 }
 
+.Subscriptions__subscription {
+  font-size: 85%;
+  @media($large) {
+    font-size: 100%;
+  }
+}
+
 .Subscriptions__left {
   display: inline-block;
   width: 80%;

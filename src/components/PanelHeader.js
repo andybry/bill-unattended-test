@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import * as format from '../utilities/format'
 
 const PanelHeader = ({
   title, total, isOpen, toggle
@@ -16,7 +17,7 @@ const PanelHeader = ({
       <h2 className="PanelHeader__title">{title}</h2>
     </div>
     <div className="PanelHeader__right">
-      <p className="PanelHeader__total">£{total}</p>
+      <p className="PanelHeader__total">£{format.price(total)}</p>
     </div>
   </div>
 )
